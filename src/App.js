@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:4000/user', {withCredentials:true})
       .then(response => {
+        
         setEmail(response.data.email);
       });
   }, []);
